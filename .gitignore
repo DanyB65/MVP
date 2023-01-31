@@ -6,3 +6,5 @@ node_modules/
 ./express
 .postgres
 ./postgres
+./nodemon
+/nodemon

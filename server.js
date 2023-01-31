@@ -1,16 +1,21 @@
-import express from "express"
-import postgres from "postgres"
-import dotenv from "dotenv"
-
-module.exports = sql
-
+// import express from "express"
+// import postgres from "postgres"
+// import dotenv from "dotenv"
+const express = require("express")
+const postgres = require("postgres")
+const dotenv = require("dotenv")
 dotenv.config()
-app.use(express.static("public"));
 
 const app = express()
+app.use(express.static("public"));
+
 const sql = postgres(process.env.DATABASE_URL)
+
+// module.exports = sql
+
+
 app.get("/tickets" , (req,res) =>{
-    sql `SELECT * FROM ticketInfo`.then((data) =>{
+    sql.query `SELECT * FROM ticketInfo`.then((data) =>{
         res.json(data)
     })
 })
@@ -20,6 +25,6 @@ postgres://mvp_5scq_user:SodjLzP6sISUGdqQu8XaBr76WLY1eJlW@dpg-cfcl1gpgp3jokp2uau
 */
 
 app.listen(process.env.PORT,() =>{
-    console.log(`listening on port ${3000}`)
+    console.log(`listening on port ${process.env.PORT}`)
 })
 

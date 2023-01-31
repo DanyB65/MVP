@@ -1,6 +1,9 @@
 /* I will need 4 event lisnters, for the submit btn,DELTE,POST and a lisnter on the map 
 that collects the data info for the input box in the ticket box
-*/ 
+*/
+const { json } = require("body-parser")
+
+ 
 
 
 const header = document.createElement("div")
@@ -48,6 +51,16 @@ submitButton.addEventListener("click",(e)=>{
     inputs.forEach((input)=>{
         input.value = ""
     })
+    fetch("/tickets",{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(inputData)
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error.message))
 })
 
 const bigBox = document.createElement("div")

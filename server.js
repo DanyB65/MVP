@@ -15,7 +15,7 @@ const sql = postgres(process.env.DATABASE_URL)
 
 
 app.get("/tickets" , (req,res) =>{
-    sql.query `SELECT * FROM ticketInfo`.then((data) =>{
+    sql.query(`SELECT * FROM ticketInfo`).then((data) =>{
         res.json(data)
     })
 })

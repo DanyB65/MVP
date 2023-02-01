@@ -1,13 +1,41 @@
 #left-column{
     width: 200px;
-    height: 1180px;
+    height: 1156px;
     background-color: rgb(255, 255, 255);
     float: left;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    justify-content: center;
-    
+    outline: 3px solid black;
+    padding-top: 25px;
+    overflow-wrap: break-word;
+
 }
+#small-display-box{
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: fit-content;
+    word-wrap: break-word;
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+.deleteBtn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+/* #dataBox{
+    padding:10px;
+    margin: 10px;
+    background-color: lightgray;
+    border: 1px;
+} */
 /* #left-column{
     content: "";
     display: block;

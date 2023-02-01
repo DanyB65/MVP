@@ -1,5 +1,5 @@
 #small-box{
-    width: 1223px;
+    width: 1220px;
     height: 120px;
     display: flex;
     flex-direction: row;
@@ -7,4 +7,29 @@
     justify-content: space-evenly;
     float: right;
     background-color: bisque;
+    outline: 3px solid black;
+}
+#name{
+    position: absolute;
+    top: 100px;
+    left: 298px;
+    display: flex;
+}
+#date{
+    position: absolute;
+    top: 100px;
+    left: 535px;
+    display: flex;
+}
+#place{
+    position: absolute;
+    top: 100px;
+    left: 775px;
+    display: flex;
+}
+#issue{
+    position: absolute;
+    top: 100px;
+    left: 1010px;
+    display: flex;
 }

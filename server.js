@@ -1,6 +1,3 @@
-// import express from "express"
-// import postgres from "postgres"
-// import dotenv from "dotenv"
 const express = require("express")
 const postgres = require("postgres")
 const dotenv = require("dotenv")
@@ -9,12 +6,9 @@ dotenv.config()
 
 const app = express()
 app.use(express.json())
-app.use(express.static("public"));
+app.use(express.static("public"))
 
 const sql = postgres(process.env.DATABASE_URL)
-
-// module.exports = sql
-
 
 app.get("/tickets" , (req,res) =>{
     sql.query(`SELECT * FROM ticketInfo`).then((data) =>{

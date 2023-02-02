@@ -63,7 +63,7 @@ submitButton.addEventListener("click",async(e)=>{
     }
     // console.log(objData)
 //fetch post for adding input data/obj to the database
-    const response = await fetch('http://localhost:3000/tickets', {
+    const response = await fetch('/tickets', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -251,7 +251,7 @@ displayData(allTickets)
     // smallBox(issue)
     
 async function getData(){
-     const response = await fetch('http://localhost:3000/tickets',{
+     const response = await fetch('/tickets',{
         method: 'GET',
         headers: {
             'Content-Type': 'application/json'

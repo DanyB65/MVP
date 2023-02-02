@@ -90,7 +90,16 @@ for(let i = 0; i<ticketsArr.length;i++){
         ticketproblem:ticketsArr[i].ticketproblem,
         id:ticketsArr[i].id
     }
-    // console.log(objData)
+    // console.log(objData.id)
+    const deleteBtn =document.createElement('button')
+    deleteBtn.id=`${objData.id}`
+    deleteBtn.textContent="Delete"
+//function of what the btn does
+    deleteBtn.addEventListener("click",function(){
+        smallDisplayBox.remove()
+        const id = parseInt (this.id,10)
+        deleteData(id)
+    })
 
 
 
@@ -98,13 +107,7 @@ for(let i = 0; i<ticketsArr.length;i++){
 const smallDisplayBox = document.createElement("div")
 smallDisplayBox.id = "small-display-box"
 //delete btn that is made once the user clicks submit, and is appened to the smalldisplaybox
-const deleteBtn =document.createElement('button')
-deleteBtn.id="delete-btn"
-deleteBtn.textContent="Delete"
-//function of what the btn does
-deleteBtn.addEventListener("click",()=>{
-smallDisplayBox.remove()
-})
+
 //making dynamic div display box 
 const displayName = document.createElement("div")
 const displayDate = document.createElement("div")
@@ -259,4 +262,10 @@ async function getData(){
     })
     // console.log(await response.json())
         return await response.json()
+}
+async function deleteData(id){
+const response = await fetch(`/tickets/${id}`,{
+    method: 'DELETE'
+})
+return  await response.json()
 }

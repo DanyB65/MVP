@@ -44,6 +44,16 @@ app.get('/tickets/:id',async(req,res)=>{
         console.log(error.message)  
     }
 })
+
+app.delete('/tickets/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        await sql `DELETE FROM ticketInfo WHERE id = ${id}`
+        res.json({ message: `Deleted pet with id: ${id}` }).status(204);
+    } catch (err) {
+        res.status(500).json({ err });
+    }
+});
     
 /*
 app crud will go here

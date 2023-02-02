@@ -14,22 +14,26 @@
     top: 100px;
     left: 298px;
     display: flex;
+    font-family: 'Comfortaa', cursive;
 }
 #date{
     position: absolute;
     top: 100px;
     left: 535px;
     display: flex;
+    font-family: 'Comfortaa', cursive;
 }
 #place{
     position: absolute;
     top: 100px;
     left: 775px;
     display: flex;
+    font-family: 'Comfortaa', cursive;
 }
 #issue{
     position: absolute;
     top: 100px;
     left: 1010px;
     display: flex;
+    font-family: 'Comfortaa', cursive;
 }

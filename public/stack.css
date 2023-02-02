@@ -1,7 +1,7 @@
 #left-column{
     width: 200px;
     height: 1156px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(46, 39, 39, 0.389);
     float: left;
     display: flex;
     flex-direction: column;
@@ -10,10 +10,12 @@
     outline: 3px solid black;
     padding-top: 25px;
     overflow-wrap: break-word;
+    position: absolute;
+    top: 70px;
 
 }
 #small-display-box{
-    border:1px solid black;
+    border:2px solid black;
     display: flex;
     flex-direction: column;
     width: fit-content;
@@ -22,8 +24,8 @@
     max-width: 150px;
     margin-bottom: 10px;
 }
-.deleteBtn{
-    background-color: red;
+#deleteBtn{
+    background-color: rgba(46, 39, 39, 0.389);
     color: white;
     border: none;
     border-radius: 5px;

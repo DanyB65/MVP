@@ -1,14 +1,14 @@
+
 #header{
-width: 100%;
-height: 60px;
-background-color: darkgray;
-display: flex;
-align-items: center;
-justify-content: center;
-text-align: center;
-line-height: 100px;
-outline: 3px solid black;
-}
-.body{
-    background-color: honeydew;
-}
+    width: 100%;
+    height: 60px;
+    background-color: darkgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    line-height: 100px;
+    outline: 3px solid black;
+    font-family: 'Lato', sans-serif;
+    font-size: 50px;
+    }

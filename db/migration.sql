@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS ticketInfo;
 CREATE TABLE ticketInfo(
    id SERIAL PRIMARY KEY NOT NULL,
    name TEXT NOT NULL,
-   date  VARCHAR(10) NOT NULL,
+   date  VARCHAR(50) NOT NULL,
    location VARCHAR (50) NOT NULL,
    ticketProblem VARCHAR(250) NOT NULL
 );
